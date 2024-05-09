@@ -2,11 +2,10 @@
   "nodes": {
     "homepage": {
       "locked": {
+        "dirtyRev": "06bbd709c9b2d2f4690833a506f7b825e348ca4e-dirty",
+        "dirtyShortRev": "06bbd70-dirty",
         "lastModified": 1715287650,
-        "narHash": "sha256-VcK+70+wJTlAmtD04dxR471P4tz1tsMkHaj+kHodijo=",
-        "ref": "refs/heads/master",
-        "rev": "06bbd709c9b2d2f4690833a506f7b825e348ca4e",
-        "revCount": 160,
+        "narHash": "sha256-c07BM6HnnkDr4msTSU3ROvABlXKHVGqIaPS3X2XjieY=",
         "type": "git",
         "url": "file:///var/www/xvrqt"
       },
