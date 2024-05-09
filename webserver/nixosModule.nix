@@ -1,40 +1,53 @@
 {
   lib,
-  pkgs,
   config,
-  options,
-  sops-nix,
-  sites,
   ...
 }: let
   # Check that the web-server is enabled at the top before proceeding
-  cfgCheck = config.websites.enable;
-# websites = ["homepage"];
-# website_options =
-#   builtins.listToAttrs
-#   (builtins.map (u: {
-#       name = u;
-#       value = {enable = lib.mkEnableOption "${u}";};
-#     })
-#     websites);
+  cfgCheck = config.services.websites.enable;
+  # Set the correct ACME attribute set depending on DNS Provider
+  acmeAttrSet =
+    if config.services.websites.dnsProvider == "cloudflare"
+    then {
+      acceptTerms = lib.mkDefault true;
+      defaults = {
+        email = lib.mkDefault config.services.websites.email;
+        dnsProvider = lib.mkDefault "cloudflare";
+        dnsResolver = lib.mkDefault "1.1.1.1:53";
+        environmentFile = lib.mkDefault null;
+        credentialFiles = lib.mkDefault {
+          CF_DNS_API_TOKEN_FILE = lib.mkDefault config.services.websites.dnsTokenFile;
+        };
+      };
+    }
+    else {}; # Only cloudflare is implemented because that's the only one I use at the moment
 in {
-  # Import the modules per website
-  # Import the Sops-Nix module to ensure we can decrypt keys for certificate setting
-# imports =
-#   (builtins.map
-#     (u: ./${u}.nix)
-#     websites)
-#   ++ [sops-nix.nixosModules.sops];
-    imports = [sops-nix.nixosModules.sops];
+  # Create an option to provide a security token from a file
+  options = {
+    services = {
+      websites = {
+        # Which DNS Provider should ACME use when issuing its certificates
+        dnsProvider = lib.mkOption {
+          type = lib.types.str;
+          default = "cloudflare";
+          description = "The DNS Provider ACME will use to confirm ownership of a domain name when issuing certificates.";
+          example = "\"cloudflare\"";
+        };
+        email = lib.mkOption {
+          type = lib.types.str;
+          default = "accounts@xvrqt.com";
+          example = "myemail@provider.com";
+          description = "Email used for your DNS Provider account";
+        };
+        # Secret token required for the ACME certificate challenge
+        dnsTokenFile = lib.mkOption {
+          type = lib.types.path;
+          description = "Path to a file that contains a secrety token used to authenticate with a DNS provider for the purpose of auto generating certificates.";
+        };
+      };
+    };
+  };
 
-  # Add options to enable each website if the web-server is enabled
-# options = {
-#   websites = {
-#     sites = lib.mkIf cfgCheck website_options;
-#   };
-# };
-
-  throw "gay girls";
   # Configure the web-server, certificates, and secrets if enabled
   config = lib.mkIf cfgCheck {
     services = {
@@ -64,21 +77,7 @@ in {
       };
     };
 
-    # Set up our certificates
-    security.acme = {
-      acceptTerms = true;
-      defaults = {
-        email = lib.mkDefault "accounts@xvrqt.com";
-        dnsProvider = lib.mkDefault "cloudflare";
-        dnsResolver = lib.mkDefault "1.1.1.1:53";
-        environmentFile = lib.mkDefault null;
-        credentialFiles = lib.mkDefault {
-          CF_DNS_API_TOKEN_FILE = config.sops.secrets."cloudflare/CF_DNS_API_TOKEN".path;
-        };
-      };
-    };
-
-    # 'acme' needs to own the file so it can access the secret
-    sops.secrets."cloudflare/CF_DNS_API_TOKEN" = {owner = "acme";};
+    # Set up our certificate challenge based on the declared DNS Provider;
+    security.acme = acmeAttrSet;
   };
 }
