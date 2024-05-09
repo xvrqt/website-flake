@@ -1,5 +1,19 @@
 {
   "nodes": {
+    "homepage": {
+      "locked": {
+        "dirtyRev": "5f90cc29cf06cd472fbe99fc28966c3fd7b1c510-dirty",
+        "dirtyShortRev": "5f90cc2-dirty",
+        "lastModified": 1714944781,
+        "narHash": "sha256-Ahel4/NY8Cgljcg3GslyOlYDA3J5KDKbX3FSAIQxK/0=",
+        "type": "git",
+        "url": "file:///var/www/xvrqt"
+      },
+      "original": {
+        "type": "git",
+        "url": "file:///var/www/xvrqt"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1715037484,
@@ -50,6 +64,7 @@
     },
     "root": {
       "inputs": {
+        "homepage": "homepage",
         "nixpkgs": "nixpkgs",
         "sops-nix": "sops-nix"
       }
@@ -60,11 +75,11 @@
         "nixpkgs-stable": "nixpkgs-stable"
       },
       "locked": {
-        "lastModified": 1715035358,
-        "narHash": "sha256-RY6kqhpCPa/q3vbqt3iYRyjO3hJz9KZnshMjbpPon8o=",
+        "lastModified": 1715244550,
+        "narHash": "sha256-ffOZL3eaZz5Y1nQ9muC36wBCWwS1hSRLhUzlA9hV2oI=",
         "owner": "Mic92",
         "repo": "sops-nix",
-        "rev": "893e3df091f6838f4f9d71c61ab079d5c5dedbd1",
+        "rev": "0dc50257c00ee3c65fef3a255f6564cfbfe6eb7f",
         "type": "github"
       },
       "original": {

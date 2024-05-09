@@ -1,4 +1,4 @@
-{lib, ...}: let
+{lib, options, ...}: let
   # Used to generate the list of nixosModules to import
   submodules = ["webserver"];
   # Convenience function that creates an 'enable' options that defaults to 'true'
@@ -13,14 +13,19 @@
     (u: ./${u}/nixosModule.nix)
     submodules;
 in {
+  throw "gay";
   inherit imports;
+
+  
 
   # Top level options
   options = {
+    services = {
     websites = {
       # Enable the web-server by default (otherwise, why even include this module?)
       # If this isn't enabled none of the other options will have an effect.
-      enable = mkEnabled;
+#      enable = mkEnabled;
     };
+  };
   };
 }
