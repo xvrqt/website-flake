@@ -1,7 +1,7 @@
 {
   inputs = {
     # Websites
-    homepage.url = "github:xvrqt/xvrqt_homepage";
+    homepage.url = "github:xvrqt/xvrqt_homepage/deploy";
   };
 
   outputs = {...} @ sites: let
