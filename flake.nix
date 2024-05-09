@@ -2,6 +2,7 @@
   inputs = {
     # Websites
     homepage.url = "github:xvrqt/xvrqt_homepage/deploy";
+    cs4600.url = "github:xvrqt/cs4600/deploy";
   };
 
   outputs = {...} @ sites: let
@@ -19,6 +20,7 @@
           #   - configures a virtual host for nginx
           #   - creates a package and installs itself
           sites.homepage.nixosModules.default # xvrqt homepage
+          sites.cs4600.nixosModules.default # cs4600 class projects
         ];
       };
     };
