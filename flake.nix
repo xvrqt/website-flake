@@ -1,7 +1,7 @@
 {
   inputs = {
     # Websites
-    homepage.url = "/var/www/xvrqt";
+    homepage.url = "github:xvrqt/xvrqt_homepage";
   };
 
   outputs = {...} @ sites: let
