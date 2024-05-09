@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "cs4600": {
+      "locked": {
+        "lastModified": 1715295565,
+        "narHash": "sha256-eRHaRKrTMvpGcIfMmnu8XgzxLQZVPlzCPl9m6my9fUc=",
+        "owner": "xvrqt",
+        "repo": "cs4600",
+        "rev": "651ade3352deb18787e3421d1c120dbc3182bd7c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "xvrqt",
+        "ref": "deploy",
+        "repo": "cs4600",
+        "type": "github"
+      }
+    },
     "homepage": {
       "locked": {
         "lastModified": 1715293298,
@@ -16,9 +32,27 @@
         "type": "github"
       }
     },
+    "moomin-orb": {
+      "locked": {
+        "lastModified": 1715296426,
+        "narHash": "sha256-/FJPo3fstPvAJP06EgIoPrbjLaYqhViFcdD0bBVB364=",
+        "owner": "xvrqt",
+        "repo": "moomin-orb",
+        "rev": "b41d050ea6fd6281a4150d5809c72bbb81d40371",
+        "type": "github"
+      },
+      "original": {
+        "owner": "xvrqt",
+        "ref": "deploy",
+        "repo": "moomin-orb",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
-        "homepage": "homepage"
+        "cs4600": "cs4600",
+        "homepage": "homepage",
+        "moomin-orb": "moomin-orb"
       }
     }
   },
