@@ -87,7 +87,7 @@ in {
             application/manifest+json 7d;
           }
         '';
-        services.nginx.appendHttpConfig = ''
+        appendHttpConfig = ''
           include mime.types;
         '';
       };
