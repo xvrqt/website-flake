@@ -87,14 +87,6 @@ in {
             application/manifest+json 7d;
           }
         '';
-        appendHttpConfig = ''
-          include mime.types;
-          types {
-            text/javascript js;
-            application/javascript js;
-            application/wasm wasm;
-          }
-        '';
       };
     };
 
