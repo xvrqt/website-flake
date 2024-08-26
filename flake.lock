@@ -41,11 +41,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1724623570,
-        "narHash": "sha256-uNqiZ8nNdI6krFkEjaWFl/ZgVY7F+NGiXQjiVpz3wYA=",
+        "lastModified": 1724645003,
+        "narHash": "sha256-8BJodSXeF5tS/GVJ47Uuc3NQdortHMc3bmGJMUvPfgE=",
         "owner": "xvrqt",
         "repo": "game-of-life-demo",
-        "rev": "55208d36fdf990533bbf2f64c04192731d0ccc07",
+        "rev": "76917808e7b60883d3e92a4e238708b54801d4d4",
         "type": "github"
       },
       "original": {
