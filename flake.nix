@@ -6,6 +6,7 @@
     cs4600.url = "github:xvrqt/cs4600/deploy";
     moomin-orb.url = "github:xvrqt/moomin-orb/deploy";
     game-of-life.url = "github:xvrqt/game-of-life-demo/deploy";
+    graphics.url = "github:xvrqt/graphics-website";
   };
 
   outputs = {flake-utils, ...} @ sites:
@@ -26,6 +27,7 @@
             sites.cs4600.nixosModules.default # cs4600 class projects
             sites.moomin-orb.nixosModules.default # View images in Moomin's Orb
             sites.game-of-life.nixosModules.${system}.default
+            sites.graphics.nixosModules.${system}.default
           ];
         };
       };
