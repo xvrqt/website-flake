@@ -172,11 +172,11 @@
         "rev": "989aec04dc66aab1912850f89aab564a55107b82",
         "revCount": 7,
         "type": "git",
-        "url": "https://git.irlqt.net/crow/http-status-codes-website.git"
+        "url": "file:///home/crow/dev/http-status-codes-website"
       },
       "original": {
         "type": "git",
-        "url": "https://git.irlqt.net/crow/http-status-codes-website.git"
+        "url": "file:///home/crow/dev/http-status-codes-website"
       }
     },
     "moomin-orb": {

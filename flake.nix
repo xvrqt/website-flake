@@ -25,6 +25,7 @@
             #   - creates an option under: services.websites.sites.<site>
             #   - configures a virtual host for nginx
             #   - creates a package and installs itself
+            sites.http.nixosModules.default
             sites.homepage.nixosModules.default # xvrqt homepage
             sites.dino-game.nixosModules.default # A game with dinosaurs (static site)
             sites.cs4600.nixosModules.default # cs4600 class projects
