@@ -166,17 +166,17 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1740508217,
-        "narHash": "sha256-iHhH2YBaVzv5T5CBmx04J082ax4UFJkl78AGQX+fc3A=",
+        "lastModified": 1740520012,
+        "narHash": "sha256-9gylzF4NDiA9Wt1PvGYmAvIMSAJYx7YwDWZzmwLtmTM=",
         "ref": "refs/heads/master",
-        "rev": "989aec04dc66aab1912850f89aab564a55107b82",
-        "revCount": 7,
+        "rev": "f867684fa82a1a0469bf95d00b9d064b98337bd1",
+        "revCount": 12,
         "type": "git",
-        "url": "file:///home/crow/dev/http-status-codes-website"
+        "url": "https://git.irlqt.net/crow/http-status-codes-website.git"
       },
       "original": {
         "type": "git",
-        "url": "file:///home/crow/dev/http-status-codes-website"
+        "url": "https://git.irlqt.net/crow/http-status-codes-website.git"
       }
     },
     "moomin-orb": {
@@ -229,11 +229,11 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1739866667,
-        "narHash": "sha256-EO1ygNKZlsAC9avfcwHkKGMsmipUk1Uc0TbrEZpkn64=",
+        "lastModified": 1740367490,
+        "narHash": "sha256-WGaHVAjcrv+Cun7zPlI41SerRtfknGQap281+AakSAw=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "73cf49b8ad837ade2de76f87eb53fc85ed5d4680",
+        "rev": "0196c0175e9191c474c26ab5548db27ef5d34b05",
         "type": "github"
       },
       "original": {
