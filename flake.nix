@@ -2,7 +2,7 @@
   inputs = {
     flake-utils.url = "github:numtide/flake-utils";
     # Websites
-    homepage.url = "github:xvrqt/xvrqt_homepage/deploy";
+    homepage.url = "git+https://git.irlqt.net/crow/homepage-website-flake";
     dino-game.url = "github:xvrqt/dino-game";
     cs4600.url = "github:xvrqt/cs4600/deploy";
     moomin-orb.url = "github:xvrqt/moomin-orb/deploy";
@@ -25,13 +25,13 @@
             #   - creates an option under: services.websites.sites.<site>
             #   - configures a virtual host for nginx
             #   - creates a package and installs itself
-            sites.http.nixosModules.default
             sites.homepage.nixosModules.default # xvrqt homepage
             sites.dino-game.nixosModules.default # A game with dinosaurs (static site)
             sites.cs4600.nixosModules.default # cs4600 class projects
             sites.moomin-orb.nixosModules.default # View images in Moomin's Orb
             sites.game-of-life.nixosModules.${system}.default
             sites.graphics.nixosModules.${system}.default
+            sites.http.nixosModules.default
           ];
         };
       };
