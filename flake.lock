@@ -166,11 +166,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1741232389,
-        "narHash": "sha256-EtzhKd95a+Kfl+G1ZAZJmFjAKFLZggCxRRAB+wZJmgg=",
+        "lastModified": 1741233869,
+        "narHash": "sha256-W0s7icms43JyPRc8mtRAD4bvsz5NQzAfqPh8I2gC6T4=",
         "ref": "refs/heads/master",
-        "rev": "ddbf0ad451cb290e526d1ec2c32a5dc01059b90d",
-        "revCount": 34,
+        "rev": "9cc1d77ea0aacfe639b97e94947aeb91b16b87a9",
+        "revCount": 35,
         "type": "git",
         "url": "https://git.irlqt.net/crow/http-status-codes-website.git"
       },
