@@ -145,11 +145,11 @@
     },
     "homepage": {
       "locked": {
-        "lastModified": 1741295904,
-        "narHash": "sha256-1LvTeUe6kLMwWA6H4ID2lJckJrFKFAtdJNDzpAJcQa8=",
+        "lastModified": 1741296285,
+        "narHash": "sha256-50nO8XTAPRJcl7LuPiHyQmokEIJZnQ8kUigUF46IQ8Y=",
         "ref": "refs/heads/master",
-        "rev": "540a12baba5aeeb40208db44319c8fdff7e26a3c",
-        "revCount": 2,
+        "rev": "f7779c4b097f44c04da3434b3e538aa2ca9d7f51",
+        "revCount": 3,
         "type": "git",
         "url": "https://git.irlqt.net/crow/homepage-website-flake"
       },
