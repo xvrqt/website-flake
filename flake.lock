@@ -166,11 +166,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1741231298,
-        "narHash": "sha256-FK9kLAQ3D8KowOME7LDaA4YcFSrNmraRfatpMbEmoTc=",
-        "ref": "refs/heads/dev",
-        "rev": "c50763af5edd277966792e3b4aefea93f546cd7e",
-        "revCount": 32,
+        "lastModified": 1741231667,
+        "narHash": "sha256-LTozpmRhfTH7SEgVfgRC3eCWWhgb7OGabJVDm8jJ/Fw=",
+        "ref": "refs/heads/master",
+        "rev": "76a04d212026cab70e50fa02c61af2063351782e",
+        "revCount": 33,
         "type": "git",
         "url": "file:///home/crow/dev/http-status-codes-website"
       },
@@ -229,11 +229,11 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1740367490,
-        "narHash": "sha256-WGaHVAjcrv+Cun7zPlI41SerRtfknGQap281+AakSAw=",
+        "lastModified": 1741010256,
+        "narHash": "sha256-WZNlK/KX7Sni0RyqLSqLPbK8k08Kq7H7RijPJbq9KHM=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "0196c0175e9191c474c26ab5548db27ef5d34b05",
+        "rev": "ba487dbc9d04e0634c64e3b1f0d25839a0a68246",
         "type": "github"
       },
       "original": {
