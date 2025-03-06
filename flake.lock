@@ -166,17 +166,17 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1741231667,
-        "narHash": "sha256-LTozpmRhfTH7SEgVfgRC3eCWWhgb7OGabJVDm8jJ/Fw=",
+        "lastModified": 1741232389,
+        "narHash": "sha256-EtzhKd95a+Kfl+G1ZAZJmFjAKFLZggCxRRAB+wZJmgg=",
         "ref": "refs/heads/master",
-        "rev": "76a04d212026cab70e50fa02c61af2063351782e",
-        "revCount": 33,
+        "rev": "ddbf0ad451cb290e526d1ec2c32a5dc01059b90d",
+        "revCount": 34,
         "type": "git",
-        "url": "file:///home/crow/dev/http-status-codes-website"
+        "url": "https://git.irlqt.net/crow/http-status-codes-website.git"
       },
       "original": {
         "type": "git",
-        "url": "file:///home/crow/dev/http-status-codes-website"
+        "url": "https://git.irlqt.net/crow/http-status-codes-website.git"
       }
     },
     "moomin-orb": {
