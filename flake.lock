@@ -145,18 +145,17 @@
     },
     "homepage": {
       "locked": {
-        "lastModified": 1715293298,
-        "narHash": "sha256-E9mWu4zXMpfcnr2ZDWDFjVE51vi37Grg73xE5PI9OEo=",
-        "owner": "xvrqt",
-        "repo": "xvrqt_homepage",
-        "rev": "2d4b2263aa048843ab60f6c30420ddbe3bd03357",
-        "type": "github"
+        "lastModified": 1741295904,
+        "narHash": "sha256-1LvTeUe6kLMwWA6H4ID2lJckJrFKFAtdJNDzpAJcQa8=",
+        "ref": "refs/heads/master",
+        "rev": "540a12baba5aeeb40208db44319c8fdff7e26a3c",
+        "revCount": 2,
+        "type": "git",
+        "url": "https://git.irlqt.net/crow/homepage-website-flake"
       },
       "original": {
-        "owner": "xvrqt",
-        "ref": "deploy",
-        "repo": "xvrqt_homepage",
-        "type": "github"
+        "type": "git",
+        "url": "https://git.irlqt.net/crow/homepage-website-flake"
       }
     },
     "http": {
