@@ -166,11 +166,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1741229391,
-        "narHash": "sha256-pH7ufw3crZbxcj5p5F51jeLhiySuJyDsX1giFYUfAOk=",
+        "lastModified": 1741230874,
+        "narHash": "sha256-8KE6R6Bs9CzFd6mHbp2DAz5QfxuHwVvhsUuenrhnkBw=",
         "ref": "refs/heads/dev",
-        "rev": "c80ddb459f0bf91038f4fe12aa0957eca6474712",
-        "revCount": 30,
+        "rev": "ef7537754d7a053e9301bf4de5e05e3fd7ff2413",
+        "revCount": 31,
         "type": "git",
         "url": "file:///home/crow/dev/http-status-codes-website"
       },
