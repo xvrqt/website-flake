@@ -8,8 +8,7 @@
     moomin-orb.url = "github:xvrqt/moomin-orb/deploy";
     game-of-life.url = "github:xvrqt/game-of-life-demo/deploy";
     graphics.url = "github:xvrqt/graphics-website";
-    # http.url = "git+https://git.irlqt.net/crow/http-status-codes-website.git";
-    http.url = "/home/crow/dev/http-status-codes-website";
+    http.url = "git+https://git.irlqt.net/crow/http-status-codes-website.git";
   };
 
   outputs = { flake-utils, ... } @ sites:
