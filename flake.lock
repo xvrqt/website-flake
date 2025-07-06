@@ -18,17 +18,17 @@
     },
     "dino-game": {
       "locked": {
-        "lastModified": 1736312600,
+        "lastModified": 1751831326,
         "narHash": "sha256-Lm+zWClgrR0/hN4knXFglY9+tS6wIf4iBrAL9KeGDPA=",
-        "owner": "xvrqt",
-        "repo": "dino-game",
-        "rev": "5026855930c1802ba47513bce1e87b35125dd083",
-        "type": "github"
+        "ref": "refs/heads/master",
+        "rev": "f0c2a62ac4c272181d5ec3a9c5231850405c66cb",
+        "revCount": 1,
+        "type": "git",
+        "url": "https://git.irlqt.net/crow/dino-website-flake"
       },
       "original": {
-        "owner": "xvrqt",
-        "repo": "dino-game",
-        "type": "github"
+        "type": "git",
+        "url": "https://git.irlqt.net/crow/dino-website-flake"
       }
     },
     "flake-utils": {
@@ -171,11 +171,11 @@
         "rev": "8a09210fb189ec8cc2e729b16a9c6c919bb79d63",
         "revCount": 39,
         "type": "git",
-        "url": "https://git.irlqt.net/crow/http-status-codes-website.git"
+        "url": "https://git.irlqt.net/crow/http-status-codes-website"
       },
       "original": {
         "type": "git",
-        "url": "https://git.irlqt.net/crow/http-status-codes-website.git"
+        "url": "https://git.irlqt.net/crow/http-status-codes-website"
       }
     },
     "moomin-orb": {

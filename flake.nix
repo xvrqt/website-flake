@@ -3,9 +3,9 @@
     flake-utils.url = "github:numtide/flake-utils";
     # Websites
     homepage.url = "git+https://git.irlqt.net/crow/homepage-website-flake";
-    http.url = "git+https://git.irlqt.net/crow/http-status-codes-website.git";
+    http.url = "git+https://git.irlqt.net/crow/http-status-codes-website";
+    dino-game.url = "git+https://git.irlqt.net/crow/dino-website-flake";
 
-    dino-game.url = "github:xvrqt/dino-game";
     cs4600.url = "github:xvrqt/cs4600/deploy";
     moomin-orb.url = "github:xvrqt/moomin-orb/deploy";
     game-of-life.url = "github:xvrqt/game-of-life-demo/deploy";
