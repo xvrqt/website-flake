@@ -2,18 +2,17 @@
   "nodes": {
     "cs4600": {
       "locked": {
-        "lastModified": 1715295565,
+        "lastModified": 1751833661,
         "narHash": "sha256-eRHaRKrTMvpGcIfMmnu8XgzxLQZVPlzCPl9m6my9fUc=",
-        "owner": "xvrqt",
-        "repo": "cs4600",
-        "rev": "651ade3352deb18787e3421d1c120dbc3182bd7c",
-        "type": "github"
+        "ref": "refs/heads/master",
+        "rev": "40c7d2ddfbe013980cdd65d853b0f522c4125f74",
+        "revCount": 1,
+        "type": "git",
+        "url": "https://git.irlqt.net/crow/cs4600-website-flake"
       },
       "original": {
-        "owner": "xvrqt",
-        "ref": "deploy",
-        "repo": "cs4600",
-        "type": "github"
+        "type": "git",
+        "url": "https://git.irlqt.net/crow/cs4600-website-flake"
       }
     },
     "dino-game": {
