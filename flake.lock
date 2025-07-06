@@ -179,18 +179,17 @@
     },
     "moomin-orb": {
       "locked": {
-        "lastModified": 1715296762,
+        "lastModified": 1751834140,
         "narHash": "sha256-A0wzzSBnA5hhaO4N9i6X8D7FUVtWM4SbVqPSkPxQuAE=",
-        "owner": "xvrqt",
-        "repo": "moomin-orb",
-        "rev": "6713903c1a3b5e4dd7c7ae914aa92393d24a5a0c",
-        "type": "github"
+        "ref": "refs/heads/master",
+        "rev": "41c8e1e170b30e77e56cf7051735ed1a4e439e4a",
+        "revCount": 1,
+        "type": "git",
+        "url": "https://git.irlqt.net/crow/moomin-orb-website-flake"
       },
       "original": {
-        "owner": "xvrqt",
-        "ref": "deploy",
-        "repo": "moomin-orb",
-        "type": "github"
+        "type": "git",
+        "url": "https://git.irlqt.net/crow/moomin-orb-website-flake"
       }
     },
     "nixpkgs": {

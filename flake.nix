@@ -6,8 +6,8 @@
     http.url = "git+https://git.irlqt.net/crow/http-status-codes-website";
     dino-game.url = "git+https://git.irlqt.net/crow/dino-website-flake";
     cs4600.url = "git+https://git.irlqt.net/crow/cs4600-website-flake";
+    moomin-orb.url = "git+https://git.irlqt.net/crow/moomin-orb-website-flake";
 
-    moomin-orb.url = "github:xvrqt/moomin-orb/deploy";
     game-of-life.url = "github:xvrqt/game-of-life-demo/deploy";
     graphics.url = "github:xvrqt/graphics-website";
   };
