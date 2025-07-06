@@ -2,7 +2,7 @@
   inputs = {
     flake-utils.url = "github:numtide/flake-utils";
     # Websites
-    homepage.url = "github:xvrqt/xvrqt_homepage/deploy";
+    homepage.url = "git+https://git.irlqt.net/crow/homepage-website-flake";
     dino-game.url = "github:xvrqt/dino-game";
     cs4600.url = "github:xvrqt/cs4600/deploy";
     moomin-orb.url = "github:xvrqt/moomin-orb/deploy";

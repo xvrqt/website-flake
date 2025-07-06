@@ -145,18 +145,17 @@
     },
     "homepage": {
       "locked": {
-        "lastModified": 1715293298,
-        "narHash": "sha256-E9mWu4zXMpfcnr2ZDWDFjVE51vi37Grg73xE5PI9OEo=",
-        "owner": "xvrqt",
-        "repo": "xvrqt_homepage",
-        "rev": "2d4b2263aa048843ab60f6c30420ddbe3bd03357",
-        "type": "github"
+        "lastModified": 1741296285,
+        "narHash": "sha256-50nO8XTAPRJcl7LuPiHyQmokEIJZnQ8kUigUF46IQ8Y=",
+        "ref": "refs/heads/master",
+        "rev": "f7779c4b097f44c04da3434b3e538aa2ca9d7f51",
+        "revCount": 3,
+        "type": "git",
+        "url": "https://git.irlqt.net/crow/homepage-website-flake"
       },
       "original": {
-        "owner": "xvrqt",
-        "ref": "deploy",
-        "repo": "xvrqt_homepage",
-        "type": "github"
+        "type": "git",
+        "url": "https://git.irlqt.net/crow/homepage-website-flake"
       }
     },
     "http": {
@@ -166,17 +165,14 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1741231667,
-        "narHash": "sha256-LTozpmRhfTH7SEgVfgRC3eCWWhgb7OGabJVDm8jJ/Fw=",
-        "ref": "refs/heads/master",
-        "rev": "76a04d212026cab70e50fa02c61af2063351782e",
-        "revCount": 33,
-        "type": "git",
-        "url": "file:///home/crow/dev/http-status-codes-website"
+        "lastModified": 1741234324,
+        "narHash": "sha256-qBq0qVgHXprHoywsg+JKOIA55NERpsS7Mpy/Yr4V1U0=",
+        "path": "/home/crow/dev/http-status-codes-website",
+        "type": "path"
       },
       "original": {
-        "type": "git",
-        "url": "file:///home/crow/dev/http-status-codes-website"
+        "path": "/home/crow/dev/http-status-codes-website",
+        "type": "path"
       }
     },
     "moomin-orb": {
