@@ -306,10 +306,7 @@
     },
     "rust-overlay": {
       "inputs": {
-        "nixpkgs": [
-          "game-of-life",
-          "nixpkgs"
-        ]
+        "nixpkgs": ["game-of-life", "nixpkgs"]
       },
       "locked": {
         "lastModified": 1724466314,
