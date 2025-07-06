@@ -4,9 +4,9 @@
     # Websites
     cs4600.url = "git+https://git.irlqt.net/crow/cs4600-website-flake";
     dino-game.url = "git+https://git.irlqt.net/crow/dino-website-flake";
+    game-of-life.url = "git+https://git.irlqt.net/crow/gol-website-flake";
     homepage.url = "git+https://git.irlqt.net/crow/homepage-website-flake";
     http.url = "git+https://git.irlqt.net/crow/http-status-codes-website";
-    game-of-life.url = "git+https://git.irlqt.net/crow/gol-website-flake";
     moomin-orb.url = "git+https://git.irlqt.net/crow/moomin-orb-website-flake";
   };
 
@@ -26,10 +26,11 @@
             #   - creates a package and installs itself
             sites.cs4600.nixosModules.default # cs4600 class projects
             sites.dino-game.nixosModules.default # A game with dinosaurs (static site)
+            sites.game-of-life.nixosModules.${system}.default # Showcase of the Game of Life with WASM and WebGL
             sites.homepage.nixosModules.default # xvrqt homepage
             sites.http.nixosModules.default # A site that generates HTTP status codes
-            sites.game-of-life.nixosModules.${system}.default # Showcase of the Game of Life with WASM and WebGL
             sites.moomin-orb.nixosModules.default # View images in Moomin's Orb
+            sites.game-of-life.nixosModules.${system}.default
           ];
         };
       };
