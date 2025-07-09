@@ -71,24 +71,6 @@
         "systems": "systems_3"
       },
       "locked": {
-        "lastModified": 1710146030,
-        "narHash": "sha256-SZ5L6eA7HJ/nmkzGG7/ISclqe6oZdOZTNoesiInkXPQ=",
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "rev": "b1d9ab70662946ef0850d488da1c9019f3a9752a",
-        "type": "github"
-      },
-      "original": {
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "type": "github"
-      }
-    },
-    "flake-utils_4": {
-      "inputs": {
-        "systems": "systems_4"
-      },
-      "locked": {
         "lastModified": 1731533236,
         "narHash": "sha256-l0KFg5HjrsfsO/JpG+r7fRrqm12kzFHyUHqHCVpMMbI=",
         "owner": "numtide",
@@ -109,57 +91,34 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1724645003,
+        "lastModified": 1751834706,
         "narHash": "sha256-8BJodSXeF5tS/GVJ47Uuc3NQdortHMc3bmGJMUvPfgE=",
-        "owner": "xvrqt",
-        "repo": "game-of-life-demo",
-        "rev": "76917808e7b60883d3e92a4e238708b54801d4d4",
-        "type": "github"
+        "ref": "refs/heads/master",
+        "rev": "7f58324e3b52c2c8d49dab010eff80b0f8a209db",
+        "revCount": 1,
+        "type": "git",
+        "url": "https://git.irlqt.net/crow/gol-website-flake"
       },
       "original": {
-        "owner": "xvrqt",
-        "ref": "deploy",
-        "repo": "game-of-life-demo",
-        "type": "github"
-      }
-    },
-    "graphics": {
-      "inputs": {
-        "flake-utils": "flake-utils_3",
-        "nixpkgs": "nixpkgs_2"
-      },
-      "locked": {
-        "lastModified": 1724973480,
-        "narHash": "sha256-tzHcZQ4ix7M4URVpSffjLZeYQ9Sr0OnLAcUkwlv8hgw=",
-        "owner": "xvrqt",
-        "repo": "graphics-website",
-        "rev": "8725a11fedcb83b02d88439fd7c8c1175b383aae",
-        "type": "github"
-      },
-      "original": {
-        "owner": "xvrqt",
-        "repo": "graphics-website",
-        "type": "github"
+        "type": "git",
+        "url": "https://git.irlqt.net/crow/gol-website-flake"
       }
     },
     "homepage": {
       "locked": {
-        "lastModified": 1741296285,
-        "narHash": "sha256-50nO8XTAPRJcl7LuPiHyQmokEIJZnQ8kUigUF46IQ8Y=",
-        "ref": "refs/heads/master",
-        "rev": "f7779c4b097f44c04da3434b3e538aa2ca9d7f51",
-        "revCount": 3,
-        "type": "git",
-        "url": "https://git.irlqt.net/crow/homepage-website-flake"
+        "lastModified": 1752099698,
+        "narHash": "sha256-JfyPDItT2svNvdw5qkYrEShhZbT8Y65iko75LA4jcjs=",
+        "path": "/home/crow/dev/homepage-website-flake",
+        "type": "path"
       },
       "original": {
-        "type": "git",
-        "url": "https://git.irlqt.net/crow/homepage-website-flake"
+        "path": "/home/crow/dev/homepage-website-flake",
+        "type": "path"
       }
     },
     "http": {
       "inputs": {
-        "nixpkgs": "nixpkgs_3",
+        "nixpkgs": "nixpkgs_2",
         "rust": "rust",
         "utils": "utils"
       },
@@ -210,22 +169,6 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1724819573,
-        "narHash": "sha256-GnR7/ibgIH1vhoy8cYdmXE6iyZqKqFxQSVkFgosBh6w=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "71e91c409d1e654808b2621f28a327acfdad8dc2",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_3": {
-      "locked": {
         "lastModified": 1741010256,
         "narHash": "sha256-WZNlK/KX7Sni0RyqLSqLPbK8k08Kq7H7RijPJbq9KHM=",
         "owner": "nixos",
@@ -240,7 +183,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_4": {
+    "nixpkgs_3": {
       "locked": {
         "lastModified": 1740019556,
         "narHash": "sha256-vn285HxnnlHLWnv59Og7muqECNMS33mWLM14soFIv2g=",
@@ -256,7 +199,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_5": {
+    "nixpkgs_4": {
       "locked": {
         "lastModified": 1736320768,
         "narHash": "sha256-nIYdTAiKIGnFNugbomgBJR+Xv5F1ZQU+HfaBqJKroC0=",
@@ -278,7 +221,6 @@
         "dino-game": "dino-game",
         "flake-utils": "flake-utils",
         "game-of-life": "game-of-life",
-        "graphics": "graphics",
         "homepage": "homepage",
         "http": "http",
         "moomin-orb": "moomin-orb"
@@ -286,8 +228,8 @@
     },
     "rust": {
       "inputs": {
-        "flake-utils": "flake-utils_4",
-        "nixpkgs": "nixpkgs_4",
+        "flake-utils": "flake-utils_3",
+        "nixpkgs": "nixpkgs_3",
         "rust-overlay": "rust-overlay_2"
       },
       "locked": {
@@ -306,7 +248,10 @@
     },
     "rust-overlay": {
       "inputs": {
-        "nixpkgs": ["game-of-life", "nixpkgs"]
+        "nixpkgs": [
+          "game-of-life",
+          "nixpkgs"
+        ]
       },
       "locked": {
         "lastModified": 1724466314,
@@ -324,7 +269,7 @@
     },
     "rust-overlay_2": {
       "inputs": {
-        "nixpkgs": "nixpkgs_5"
+        "nixpkgs": "nixpkgs_4"
       },
       "locked": {
         "lastModified": 1740074384,
@@ -400,24 +345,9 @@
         "type": "github"
       }
     },
-    "systems_5": {
-      "locked": {
-        "lastModified": 1681028828,
-        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
-        "owner": "nix-systems",
-        "repo": "default",
-        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-systems",
-        "repo": "default",
-        "type": "github"
-      }
-    },
     "utils": {
       "inputs": {
-        "systems": "systems_5"
+        "systems": "systems_4"
       },
       "locked": {
         "lastModified": 1731533236,
