@@ -14,7 +14,7 @@
     moomin-orb.url = "git+https://git.irlqt.net/crow/moomin-orb-website-flake";
   };
 
-  outputs = { flake-utils, ... } @ sites:
+  outputs = { flake-utils, secrets, ... } @ sites:
     flake-utils.lib.eachDefaultSystem (system: {
       nixosModules = {
         default = {
