@@ -2,8 +2,6 @@
   inputs = {
     # Used to store and retrieve encrypted DNS challenge tokens
     secrets.url = "git+https://git.irlqt.net/crow/secrets-flake";
-    # TODO Remove me, by removing my dependency in the GOL
-    flake-utils.url = "github:numtide/flake-utils";
 
     # Websites
     cs4600.url = "git+https://git.irlqt.net/crow/cs4600-website-flake";
@@ -15,29 +13,45 @@
   };
 
   outputs = { flake-utils, secrets, ... } @ sites:
-    flake-utils.lib.eachDefaultSystem (system: {
-      nixosModules = {
-        default = {
-          imports = [
-            # Allows for use of secrets in the NixOS Module below
-            secrets.nixosModules.default
-            # Main option to enable the websites
-            # Imports submodules: webserver (enables nginx, configures auto fetching certificates)
-            ./nixosModule.nix
+    {
+      nixosModules =
+        {
+          default = { pkgs, ... }: {
+            imports = [
+              # Allows for use of secrets in the NixOS Module below
+              secrets.nixosModules.default
+              # Main option to enable the websites
+              # Imports submodules: webserver (enables nginx, configures auto fetching certificates)
+              ./nixosModule.nix
 
-            # Import individual sites
-            # Each site
-            #   - creates an option under: services.websites.sites.<site>
-            #   - configures a virtual host for nginx
-            #   - creates a package and installs itself
-            sites.cs4600.nixosModules.default # cs4600 class projects
-            sites.dino-game.nixosModules.default # A game with dinosaurs (static site)
-            sites.homepage.nixosModules.default # xvrqt homepage
-            sites.http.nixosModules.default # A site that generates HTTP status codes
-            sites.moomin-orb.nixosModules.default # View images in Moomin's Orb
-            sites.game-of-life.nixosModules.${system}.default
-          ];
+              # Import individual sites
+              # Each site
+              #   - creates an option under: services.websites.sites.<site>
+              #   - configures a virtual host for nginx
+              #   - creates a package and installs itself
+              sites.cs4600.nixosModules.default # cs4600 class projects
+              sites.dino-game.nixosModules.default # A game with dinosaurs (static site)
+              sites.homepage.nixosModules.default # xvrqt homepage
+              sites.http.nixosModules.default # A site that generates HTTP status codes
+              sites.moomin-orb.nixosModules.default # View images in Moomin's Orb
+              sites.game-of-life.nixosModules.${pkgs.system}.default
+            ];
+          };
+        };
+
+      # Convenience function to setup a simple reverse proxy
+      setupReverseProxy = { domain, proxy_socket }: {
+        config.services.nginx.virtualHosts.${domain} = {
+          forceSSL = true;
+          acmeRoot = null;
+          enableACME = true;
+
+          locations."/" = {
+            proxyPass = proxy_socket;
+            proxyWebsockets = true;
+            recommendedProxySettings = true;
+          };
         };
       };
-    });
+    };
 }
