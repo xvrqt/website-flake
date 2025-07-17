@@ -1,12 +1,15 @@
 {
   inputs = {
+    # Used to store and retrieve encrypted DNS challenge tokens
+    secrets.url = "git+https://git.irlqt.net/crow/secrets-flake";
+    # TODO Remove me, by removing my dependency in the GOL
     flake-utils.url = "github:numtide/flake-utils";
+
     # Websites
     cs4600.url = "git+https://git.irlqt.net/crow/cs4600-website-flake";
     dino-game.url = "git+https://git.irlqt.net/crow/dino-website-flake";
     game-of-life.url = "git+https://git.irlqt.net/crow/gol-website-flake";
     homepage.url = "git+https://git.irlqt.net/crow/homepage-website-flake";
-    # homepage.url = "/home/crow/dev/homepage-website-flake";
     http.url = "git+https://git.irlqt.net/crow/http-status-codes-website";
     moomin-orb.url = "git+https://git.irlqt.net/crow/moomin-orb-website-flake";
   };
@@ -16,6 +19,8 @@
       nixosModules = {
         default = {
           imports = [
+            # Allows for use of secrets in the NixOS Module below
+            secrets.nixosModules.default
             # Main option to enable the websites
             # Imports submodules: webserver (enables nginx, configures auto fetching certificates)
             ./nixosModule.nix

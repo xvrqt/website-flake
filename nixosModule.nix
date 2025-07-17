@@ -1,8 +1,8 @@
-{
-  lib,
-  config,
-  ...
-}: let
+{ lib
+, config
+, ...
+}:
+let
   # Check that the web-server is enabled at the top before proceeding
   cfgCheck = config.services.websites.enable;
 
@@ -21,14 +21,15 @@
         };
       };
     }
-    else {}; # Only cloudflare is implemented because that's the only one I use at the moment
+    else { }; # Only cloudflare is implemented because that's the only one I use at the moment
 
   # Convenience function that creates an 'enable' options that defaults to 'true'
   mkEnabled = lib.mkOption {
     type = lib.types.bool;
     default = true;
   };
-in {
+in
+{
   # Website Options
   options = {
     services = {
@@ -55,6 +56,7 @@ in {
         # Secret token required for the ACME certificate challenge
         dnsTokenFile = lib.mkOption {
           type = lib.types.path;
+          default = config.age.secrets.acmeDNSToken.path;
           description = "Path to a file that contains a secrety token used to authenticate with a DNS provider for the purpose of auto generating certificates.";
         };
       };
@@ -62,35 +64,55 @@ in {
   };
 
   # Configure the web-server, certificates, and secrets if enabled
-  config = lib.mkIf cfgCheck {
-    services = {
-      # Enable a web-server and reverse proxy with some sensible defaults
-      nginx = {
-        enable = true;
+  config =
+    let
+      token_file = "${config.services.websites.dnsProvider}-dns.token";
+    in
+    lib.mkIf cfgCheck {
+      age.secrets.acmeDNSToken = {
+        # The secret file that will be decrypted
+        file = ./secrets + ("/" + "${token_file}");
+        # Folder to decrypt into (config.age.secretDir/'path')
+        name = "dns/acme.token";
 
-        # Use the recommended settings
-        recommendedProxySettings = true;
-        recommendedTlsSettings = true;
-        recommendedOptimisation = true;
-        recommendedGzipSettings = true;
+        # File Permissions
+        mode = "400";
+        owner = "root";
 
-        # 500Mib Max Uploads
-        clientMaxBodySize = "500m";
-        # Convenient global expiry by content type map
-        commonHttpConfig = ''
-          map $sent_http_content_type $expires {
-            default off;
-            text/html 1d;
-            text/css 1d;
-            applications/javascript 1d;
-            ~image/ max;
-            application/manifest+json 7d;
-          }
-        '';
+        # Symlink from the secretDir to the 'path'
+        # Doesn't matter since both are in the same partition
+        symlink = true;
       };
-    };
 
-    # Set up our certificate challenge based on the declared DNS Provider;
-    security.acme = acmeAttrSet;
-  };
+      services = {
+        # Enable a web-server and reverse proxy with some sensible defaults
+        nginx = {
+          enable = true;
+
+          # Use the recommended settings
+          recommendedProxySettings = true;
+          recommendedTlsSettings = true;
+          recommendedOptimisation = true;
+          recommendedGzipSettings = true;
+
+          # 500Mib Max Uploads
+          clientMaxBodySize = "500m";
+          # Convenient global expiry by content type map
+          commonHttpConfig = ''
+            map $sent_http_content_type $expires {
+              default off;
+              text/html 1d;
+              text/css 1d;
+              applications/javascript 1d;
+              ~image/ max;
+              application/manifest+json 7d;
+            }
+          '';
+        };
+      };
+
+      # Set up our certificate challenge based on the declared DNS Provider;
+      security.acme = acmeAttrSet;
+    };
 }
+
