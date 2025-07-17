@@ -135,11 +135,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1752718454,
-        "narHash": "sha256-o1iZX6K0wW7HCylwdB8x9RelC6Abe+JobTRAKypy0RE=",
+        "lastModified": 1752718949,
+        "narHash": "sha256-r/o/G79PQNqmEsPxWGVYyNsP7OhBNQAe6q5uJFo1SwM=",
         "ref": "refs/heads/master",
-        "rev": "c32fb293a09dba5a13e0e9734149bc4f2eb05f9e",
-        "revCount": 4,
+        "rev": "b0e63d01316ae92106323e4e921465d1fcbfce8a",
+        "revCount": 5,
         "type": "git",
         "url": "https://git.irlqt.net/crow/gol-website-flake"
       },
