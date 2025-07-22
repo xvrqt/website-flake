@@ -193,11 +193,11 @@
         "utils": "utils_2"
       },
       "locked": {
-        "lastModified": 1753148921,
-        "narHash": "sha256-suRkAsoa5wLW/X/EYdFWVcgtPGNV4eTpMpyzxpUBRgA=",
+        "lastModified": 1753153827,
+        "narHash": "sha256-jnhZ5GUUKqykDLVIEgP/GE/bsjv/0QzgTRs5IFed7dA=",
         "ref": "refs/heads/master",
-        "rev": "02df6a7954e08a2316c2b8b7bb2d8f63cb6f28b3",
-        "revCount": 2,
+        "rev": "815e93ee6a0207f93d0c766f55fdab894bfd635a",
+        "revCount": 3,
         "type": "git",
         "url": "https://git.irlqt.net/crow/irlqt-net-website-flake"
       },
