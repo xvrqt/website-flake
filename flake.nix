@@ -14,6 +14,7 @@
     homepage.url = "git+https://git.irlqt.net/crow/homepage-website-flake";
     http.url = "git+https://git.irlqt.net/crow/http-status-codes-website";
     moomin-orb.url = "git+https://git.irlqt.net/crow/moomin-orb-website-flake";
+    irlqt-net.url = "git+https://git.irlqt.net/crow/irlqt-net-website-flake";
   };
 
   outputs = { utils, nixpkgs, secrets, ... } @ sites:
@@ -39,6 +40,9 @@
                   sites.dino-game.nixosModules.default # A game with dinosaurs
                   sites.homepage.nixosModules.default # xvrqt homepage
                   sites.http.nixosModules.default # A site that generates HTTP status codes
+
+                  sites.irlqt-net.nixosModules.default # cs4600 class projects
+
                   sites.moomin-orb.nixosModules.default # View images in Moomin's Orb
                   sites.game-of-life.nixosModules.${system}.default
                 ];

@@ -18,6 +18,7 @@ let
         environmentFile = lib.mkDefault null;
         credentialFiles = lib.mkDefault {
           CF_DNS_API_TOKEN_FILE = lib.mkDefault config.services.websites.dnsTokenFile;
+          CF_ZONE_API_TOKEN_FILE = lib.mkDefault config.services.websites.dnsTokenFile;
         };
       };
     }
@@ -110,6 +111,7 @@ in
           '';
         };
       };
+      users.users.nginx.extraGroups = [ "acme" ];
 
       # Set up our certificate challenge based on the declared DNS Provider;
       security.acme = acmeAttrSet;
