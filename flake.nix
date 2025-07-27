@@ -49,13 +49,18 @@
               };
             };
           });
-      nixosModules = wrapped.nixosModules // {
-        minimal = {
+      nixosModules = wrapped.nixosModules // rec {
+        # Only the reverse proxy setup and nothing else
+        reverseProxy = {
           imports = [
             secrets.nixosModules.default
             ./nixosModule.nix
           ];
         };
+        minimal = reverseProxy;
+
+        # Allows caller to include sites individually
+        inherit sites;
       };
     in
     {
