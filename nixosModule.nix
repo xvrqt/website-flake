@@ -32,7 +32,7 @@ let
 in
 {
   # Website Options
-  options = lib.mkIf (!config.services.websites) {
+  options = lib.mkIf (!config.services?websites) {
     services = {
       websites = {
         # Enable the web-server by default (otherwise, why even include this module?)
