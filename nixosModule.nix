@@ -111,6 +111,14 @@ in
           '';
         };
       };
+
+      # Open the firewall for web traffic
+      networking = lib.mkIf cfgCheck {
+        firewall = {
+          allowedTCPPorts = [ 80 443 ];
+        };
+      };
+      # Add the ACME user to NGINX group to facilitate certificate management
       users.users.nginx.extraGroups = [ "acme" ];
 
       # Set up our certificate challenge based on the declared DNS Provider;
