@@ -49,7 +49,14 @@
               };
             };
           });
-      nixosModules = wrapped.nixosModules;
+      nixosModules = wrapped.nixosModules // {
+        minimal = {
+          imports = [
+            secrets.nixosModules.default
+            ./nixosModule.nix
+          ];
+        };
+      };
     in
     {
       inherit nixosModules;
