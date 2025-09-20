@@ -193,11 +193,11 @@
         "utils": "utils_2"
       },
       "locked": {
-        "lastModified": 1753393554,
-        "narHash": "sha256-BTHqWt1QLMBMHsyS3e+lLxbV/Qk1LVQni9f6RsLXbv4=",
+        "lastModified": 1758391957,
+        "narHash": "sha256-692naAvVLWKgNazXX0ywSrdHX/bS64aZxCZ3jyY2SMU=",
         "ref": "refs/heads/master",
-        "rev": "5556b879d67c859fe330802e2f320ea03fafdc51",
-        "revCount": 8,
+        "rev": "61a802c0c9aa5006240b5a8052d4cb8f74cc4dd5",
+        "revCount": 17,
         "type": "git",
         "url": "https://git.irlqt.net/crow/irlqt-net-website-flake"
       },
@@ -303,11 +303,11 @@
     },
     "nixpkgs_6": {
       "locked": {
-        "lastModified": 1753250450,
-        "narHash": "sha256-i+CQV2rPmP8wHxj0aq4siYyohHwVlsh40kV89f3nw1s=",
+        "lastModified": 1758277210,
+        "narHash": "sha256-iCGWf/LTy+aY0zFu8q12lK8KuZp7yvdhStehhyX1v8w=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "fc02ee70efb805d3b2865908a13ddd4474557ecf",
+        "rev": "8eaee110344796db060382e15d3af0a9fc396e0e",
         "type": "github"
       },
       "original": {
