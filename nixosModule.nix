@@ -90,6 +90,8 @@ in
         nginx = {
           enable = true;
 
+          defaultListenAddresses = [ "0.0.0.0" ];
+
           # Use the recommended settings
           recommendedProxySettings = true;
           recommendedTlsSettings = true;
