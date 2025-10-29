@@ -15,6 +15,7 @@
     http.url = "git+https://git.irlqt.net/crow/http-status-codes-website";
     moomin-orb.url = "git+https://git.irlqt.net/crow/moomin-orb-website-flake";
     irlqt-net.url = "git+https://git.irlqt.net/crow/irlqt-net-website-flake";
+    moshimom.url = "git+https://git.irlqt.net/crow/moshi-mom-website-flake";
   };
 
   outputs = { utils, nixpkgs, secrets, ... } @ sites:
@@ -42,6 +43,7 @@
                   sites.http.nixosModules.default # A site that generates HTTP status codes
 
                   sites.irlqt-net.nixosModules.default # cs4600 class projects
+                  sites.moshimom.nixosModules.default # My daughter's mother
 
                   sites.moomin-orb.nixosModules.default # View images in Moomin's Orb
                   sites.game-of-life.nixosModules.${system}.default
