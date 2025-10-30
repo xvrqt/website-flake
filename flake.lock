@@ -223,11 +223,11 @@
     },
     "moshimom": {
       "locked": {
-        "lastModified": 1761776128,
-        "narHash": "sha256-tuxYlsnxkskNWueS4n7p/JIRG0D/rxLVFJStsLpFSB4=",
+        "lastModified": 1761783767,
+        "narHash": "sha256-uwJA3y80apSjXVu42E0zLFmeTzFy+uwYAW9Yi/1McoM=",
         "ref": "refs/heads/master",
-        "rev": "24766ec181831dd2b721bc357a5de725b6779d5b",
-        "revCount": 3,
+        "rev": "012b4a3f72816a01177d7c0af0d3fea18ab48a9a",
+        "revCount": 4,
         "type": "git",
         "url": "https://git.irlqt.net/crow/moshi-mom-website-flake"
       },
