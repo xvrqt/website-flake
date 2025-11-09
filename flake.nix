@@ -5,7 +5,7 @@
 
     # Used for building the site
     utils.url = "github:numtide/flake-utils";
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
 
     # Websites
     cs4600.url = "git+https://git.irlqt.net/crow/cs4600-website-flake";
