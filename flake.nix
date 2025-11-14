@@ -8,14 +8,6 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
 
     # Websites
-    cs4600.url = "git+https://git.irlqt.net/crow/cs4600-website-flake";
-    dino-game.url = "git+https://git.irlqt.net/crow/dino-website-flake";
-    game-of-life.url = "git+https://git.irlqt.net/crow/gol-website-flake";
-    homepage.url = "git+https://git.irlqt.net/crow/homepage-website-flake";
-    http.url = "git+https://git.irlqt.net/crow/http-status-codes-website";
-    moomin-orb.url = "git+https://git.irlqt.net/crow/moomin-orb-website-flake";
-    irlqt-net.url = "git+https://git.irlqt.net/crow/irlqt-net-website-flake";
-    moshimom.url = "git+https://git.irlqt.net/crow/moshi-mom-website-flake";
   };
 
   outputs = { utils, nixpkgs, secrets, ... } @ sites:
@@ -37,16 +29,6 @@
                   #   - creates an option under: services.websites.sites.<site>
                   #   - configures a virtual host for nginx
                   #   - creates a package and installs itself
-                  sites.cs4600.nixosModules.default # cs4600 class projects
-                  sites.dino-game.nixosModules.default # A game with dinosaurs
-                  sites.homepage.nixosModules.default # xvrqt homepage
-                  sites.http.nixosModules.default # A site that generates HTTP status codes
-
-                  sites.irlqt-net.nixosModules.default # cs4600 class projects
-                  sites.moshimom.nixosModules.default # My daughter's mother
-
-                  sites.moomin-orb.nixosModules.default # View images in Moomin's Orb
-                  sites.game-of-life.nixosModules.${system}.default
                 ];
               };
             };
